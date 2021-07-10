@@ -1,0 +1,146 @@
+@import "../../../../src/color.scss";
+
+section {
+    top: 150px;
+}
+
+.price-card {
+    border-radius: 15px;
+    background-color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-header {
+        padding: 25px 10px;
+        text-align: center;
+        color: $colorWhite;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        position: relative;
+        width: 100%;
+        margin-bottom: 15px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+        }
+    }
+
+    .advantages-menu {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding: 10px 0;
+        margin-bottom: 0 !important;
+
+        &-item {
+            width: 70%;
+            margin: 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .fa-check,
+            .fa-times {
+                padding-right: 15px;
+                font-size: 18px;
+                font-weight: bold;
+                flex-grow: 1;
+            }
+
+            .fa-check {
+                color: green;
+            }
+
+            .fa-times {
+                color: red;
+            }
+
+            span {
+                text-align: start;
+                flex-grow: 1;
+            }
+        }
+    }
+
+    .price {
+        color: $colorAccentDark;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        font-size: 2.5rem;
+        padding: 14px 0;
+    }
+}
+
+.basic {
+    .price-card-header {
+        background-color: $colorAccentDark;
+
+        &::before {
+            border-top: 10px solid $colorAccentDark;
+        }
+    }
+
+    .price {
+        color: $colorAccentDark;
+    }
+}
+
+.standard {
+    .price-card-header {
+        background-color: $btnBg;
+
+        &::before {
+            border-top: 10px solid $btnBg;
+        }
+    }
+
+    .price {
+        color: $btnBg;
+    }
+}
+
+.premium {
+    .price-card-header {
+        background-color: orangered;
+
+        &::before {
+            border-top: 10px solid orangered;
+        }
+    }
+
+    .price {
+        color: orangered;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .standard {
+        transform: scale(1.1);
+        box-shadow: -2px -3px 13px 0px rgba(255, 255, 255, 0.5);
+    }
+}
+@media screen and (max-width: 768px) {
+    section {
+        inset: 90px 0;
+    }
+
+    .price-card {
+        .advantages-menu {
+            &-item {
+                width: 80%;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+/*==============Google Fonts==================*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+@import '../src/color.scss';
+
+
+
+/*==============General Styles==================*/
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: $primaryBackground;
+}
+
+li{
+    list-style: none;
+}
+
+a,a:hover{
+    text-decoration: none;
+}
+
+section{
+    position: relative;
+    inset: 180px 0;
+}
+
+@media screen and (max-width: 768px) {
+   section{
+       inset: 100px 0;
+   }
+}
+
+
+

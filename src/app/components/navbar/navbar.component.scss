@@ -1,0 +1,54 @@
+/*==============Import global variables from general style file==================*/
+@import "../../../../src/color.scss";
+
+/*==============Navbar==================*/
+
+.header {
+    position: fixed;
+    inset: 0;
+    bottom: unset;
+    z-index: 11;
+    transition: all 0.5s;
+}
+
+.navbar-brand {
+    color: $colorWhite;
+}
+
+#navbarSupportedContent ul li {
+    padding-right: 1.5rem;
+
+    a {
+        color: $colorWhite;
+
+        &:hover {
+            color: $colorAccentDark;
+        }
+    }
+
+    .active-link {
+        color: $colorAccent;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    #navbarSupportedContent ul {
+        background-color: $secondaryBackground;
+        border-radius: 5px;
+    }
+
+    #navbarSupportedContent ul li {
+        margin: 10px;
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+    .navbar {
+        padding: 0 1rem;
+    }
+}
